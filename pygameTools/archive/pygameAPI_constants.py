@@ -1,0 +1,16 @@
+from pygame import Color
+
+# Colors
+
+
+
+
+# Mouse and keyboard constants
+NUMBER_OF_MOUSE_BUTTONS = 5
+NUMBER_OF_KEYBOARD_BUTTONS = 512
+
+MOUSE_PRIMARY = 0
+MOUSE_SECONDARY = 1
+MOUSE_MIDDLE = 2
+MOUSE_BACK = 3
+MOUSE_FORWARD = 4
