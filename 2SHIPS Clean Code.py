@@ -9,7 +9,7 @@ from config_constants import *
 from Ship import *
 from Player import *
 from GameObject import *
-from pygameTools.pygameAPI import *
+import pygameengine
 
 
 def full_exit():
@@ -76,12 +76,12 @@ SHOOT = 20
 
 menu_color = colors[randint(0, len(colors) - 1)] if enable_random_menu_color else default_menu_color
 
-font_path = fonts_folder + font_name
+font_NES_path = fonts_folder + font_name
 
-font_NES_24 = pygame.font.Font(font_path, 24)
-font_NES_32 = pygame.font.Font(font_path, 32)
-font_NES_48 = pygame.font.Font(font_path, 48)
-font_NES_64 = pygame.font.Font(font_path, 64)
+font_NES_24 = pygame.font.Font(font_NES_path, 24)
+font_NES_32 = pygame.font.Font(font_NES_path, 32)
+font_NES_48 = pygame.font.Font(font_NES_path, 48)
+font_NES_64 = pygame.font.Font(font_NES_path, 64)
 
 font_round_HUD = font_NES_24
 font_game_HUD = font_NES_48
@@ -309,3 +309,15 @@ if __name__ == "__main__":
         pygame.display.update()
         draw_game_HUD(sc, BLACK, BLACK, GREEN)
         wait(1, FPS_MainMenu)
+
+
+
+
+class GameEngine(pygameengine.PygameEngine):
+    def update(self):
+
+
+
+if __name__ == "__main__":
+    pygameengine = GameEngine(RESOLUTION)
+    pygameengine.start()

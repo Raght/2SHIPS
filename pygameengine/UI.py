@@ -1,6 +1,5 @@
 from multipledispatch import dispatch
 from pygame.math import Vector2
-from pygameAPI import *
 import pygame.draw
 import pygame.mouse
 
